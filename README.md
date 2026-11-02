@@ -20,7 +20,7 @@ The trained model is integrated with FastAPI to provide prediction results throu
 * Uvicorn
 * Docker
 * Docker Compose
-* Render (Deployment)
+* Render
 
 ## Dataset
 
@@ -150,15 +150,11 @@ python -m uvicorn app.main:app --reload
 
 The API will be available at:
 
-```text
-http://127.0.0.1:8000
-```
+`http://127.0.0.1:8000`
 
 **Swagger API Documentation:**
 
-```text
-http://127.0.0.1:8000/docs
-```
+`http://127.0.0.1:8000/docs`
 
 ## Run with Docker
 
@@ -176,21 +172,15 @@ docker compose up --build
 
 **API:**
 
-```text
-http://localhost:8000
-```
+`http://localhost:8000`
 
 **Swagger Documentation:**
 
-```text
-http://localhost:8000/docs
-```
+`http://localhost:8000/docs`
 
 **Health Check:**
 
-```text
-http://localhost:8000/health
-```
+`http://localhost:8000/health`
 
 ### 3. Stop the container
 
@@ -226,6 +216,7 @@ Send the following JSON data to the POST `/predict` endpoint:
 
 ```json
 {
+  "heart_disease": true,
   "prediction": 1,
   "result": "Heart Disease Detected",
   "probability": 0.69
@@ -236,9 +227,13 @@ The probability represents the model's estimated probability for class 1. It is 
 
 ## Deployment
 
-The application is designed for deployment using Render with Docker.
+The application is deployed on Render using Docker.
 
-**Live API:** https://heart-disease-prediction-cxcm.onrender.com
+**Live API:**
+https://heart-disease-prediction-cxcm.onrender.com
+
+**Swagger API Documentation:**
+https://heart-disease-prediction-cxcm.onrender.com/docs
 
 **GitHub Repository:**
 https://github.com/Rabeabasry1036/heart-disease-prediction
@@ -246,7 +241,6 @@ https://github.com/Rabeabasry1036/heart-disease-prediction
 ## Author
 
 **Rabea Basry**
-
 Information & Communication Engineering
 Daffodil International University
 
