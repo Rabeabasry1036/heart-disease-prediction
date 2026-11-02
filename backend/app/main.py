@@ -105,11 +105,11 @@ def predict(
         )
 
         return HeartDiseaseResponse(
+            heart_disease=bool(prediction == 1),
             prediction=prediction,
             result=result,
             probability=round(probability, 4)
         )
-
     except Exception as e:
 
         raise HTTPException(

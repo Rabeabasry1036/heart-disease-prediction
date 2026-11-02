@@ -31,7 +31,7 @@ class HeartDiseaseInput(BaseModel):
 
 
 class HeartDiseaseResponse(BaseModel):
-
+    heart_disease: bool
     prediction: int
     result: str
     probability: float
