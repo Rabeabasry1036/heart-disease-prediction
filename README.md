@@ -55,16 +55,16 @@ The dataset contains 13 input features and one target variable.
 
 ## Machine Learning Model
 
-* Algorithm: Random Forest Classifier
-* Number of estimators: 100
-* Train-test split: 80:20
-* Random state: 42
+* **Algorithm:** Random Forest Classifier
+* **Number of estimators:** 100
+* **Train-test split:** 80:20
+* **Random state:** 42
 * Stratified splitting was used to maintain class distribution.
 * Duplicate records were removed before training.
 
 ### Model Performance
 
-Test accuracy: **75.41%**
+**Test Accuracy: 75.41%**
 
 The model is intended for educational and research purposes only. It is not a substitute for professional medical diagnosis.
 
@@ -74,6 +74,8 @@ The model is intended for educational and research purposes only. It is not a su
 heart-disease-prediction/
 │
 ├── backend/
+│   ├── __init__.py
+│   │
 │   ├── app/
 │   │   ├── __init__.py
 │   │   ├── main.py
@@ -113,7 +115,7 @@ The application provides the following endpoints:
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Rabeabasry1036/heart-disease-prediction.git
 ```
 
 ### 2. Navigate to the project directory
@@ -128,6 +130,7 @@ Windows PowerShell:
 
 ```powershell
 py -3.11 -m venv .venv
+
 .\.venv\Scripts\Activate.ps1
 ```
 
@@ -141,6 +144,7 @@ pip install -r backend/requirements.txt
 
 ```powershell
 cd backend
+
 python -m uvicorn app.main:app --reload
 ```
 
@@ -150,7 +154,7 @@ The API will be available at:
 http://127.0.0.1:8000
 ```
 
-Swagger documentation:
+**Swagger API Documentation:**
 
 ```text
 http://127.0.0.1:8000/docs
@@ -170,19 +174,19 @@ docker compose up --build
 
 ### 2. Access the API
 
-API:
+**API:**
 
 ```text
 http://localhost:8000
 ```
 
-Swagger documentation:
+**Swagger Documentation:**
 
 ```text
 http://localhost:8000/docs
 ```
 
-Health check:
+**Health Check:**
 
 ```text
 http://localhost:8000/health
@@ -228,13 +232,16 @@ Send the following JSON data to the POST `/predict` endpoint:
 }
 ```
 
+The probability represents the model's estimated probability for class 1. It is not a clinical risk estimate.
+
 ## Deployment
 
 The application is designed for deployment using Render with Docker.
 
 **Live API:** Coming soon.
 
-**GitHub Repository:** Coming soon.
+**GitHub Repository:**
+https://github.com/Rabeabasry1036/heart-disease-prediction
 
 ## Author
 
