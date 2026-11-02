@@ -238,7 +238,7 @@ The probability represents the model's estimated probability for class 1. It is 
 
 The application is designed for deployment using Render with Docker.
 
-**Live API:** Coming soon.
+**Live API:** https://heart-disease-prediction-cxcm.onrender.com
 
 **GitHub Repository:**
 https://github.com/Rabeabasry1036/heart-disease-prediction
